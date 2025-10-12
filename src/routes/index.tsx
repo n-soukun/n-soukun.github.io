@@ -39,7 +39,7 @@ function App() {
           >
             n-soukun
           </div>
-          <div className=" mt-8 w-fit text-xl tracking-wider">
+          <div className=" mt-8 w-fit text-xl tracking-wider text-center">
             新しい技術に触れ、手を動かすことが好きなエンジニアです。
           </div>
         </div>
