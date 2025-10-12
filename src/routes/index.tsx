@@ -37,7 +37,7 @@ function App() {
               " w-fit bg-clip-text text-transparent bg-linear-to-r from-sky-600 to-blue-600 font-bold text-7xl"
             )}
           >
-            楽しいから創る
+            n-soukun
           </div>
           <div className=" mt-8 w-fit text-xl tracking-wider">
             新しい技術に触れ、手を動かすことが好きなエンジニアです。
