@@ -20,8 +20,10 @@ export const ServiceCard = ({
   tags,
 }: ServiceCardProps) => {
   return (
-    <div className=" shadow rounded-2xl p-4 bg-white dark:bg-zinc-700">
-      <img src={image} className=" rounded-lg w-full aspect-video" />
+    <div className=" shadow rounded-2xl p-4 bg-white dark:bg-zinc-700 flex flex-col">
+      <div className="rounded-lg w-full aspect-video overflow-hidden bg-zinc-100 dark:bg-zinc-800">
+        <img src={image} className=" object-contain w-full h-full" />
+      </div>
       <div className=" mt-4 text-zinc-900 dark:text-zinc-100 text-2xl font-bold">
         {title}
       </div>
@@ -40,8 +42,11 @@ export const ServiceCard = ({
           ))}
         </div>
       )}
+      <div className=" grow"></div>
       <a
         href={url}
+        target="_blank"
+        rel="noopener noreferrer"
         className={clsx(
           " flex items-center justify-center p-2 rounded-xl mt-4 transition-colors ",
           " bg-zinc-950 hover:bg-zinc-700 text-zinc-50 ",

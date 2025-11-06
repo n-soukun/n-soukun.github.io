@@ -7,6 +7,7 @@ import Avator from "../assets/avatar.jpg";
 import Nexus from "../assets/nexus.jpg";
 import Holoyotei from "../assets/holoyotei.png";
 import TwitchNoticeForDiscord from "../assets/twitch-notice-for-discord.png";
+
 import { ServiceCard } from "@/components/ServiceCard";
 import { Github } from "@/components/icons/Github";
 import { LinkIcon } from "@/components/icons/Link";
@@ -48,22 +49,34 @@ function App() {
         <SectionTitle title="About me" subtitle="自己紹介" />
         <div className=" flex md:flex-row flex-col gap-8 items-center p-8 shadow bg-zinc-50 dark:bg-zinc-700 rounded-2xl">
           <img src={Avator} width={256} height={256} className=" rounded-xl" />
-          <div>
+          <div className=" grow">
             <div className=" text-2xl font-bold">Soukun</div>
             <p className=" mt-4 text-lg leading-relaxed">
               はじめまして、Soukunと申します。フロントエンドからサーバーサイドまで幅広く学んでおります。
               <br />
               私は趣味がプログラミングで、ほぼ毎日コードを書いております。他には、EスポーツやVTuberも大好きです。
-              <br />
-              <br />
-              技術的な好奇心が強く、新しいフレームワークやライブラリをよく試します。そのため、広く浅く様々な知識を持ち合わせていることが強みです。
-              また、TypeScriptを長く使っているため、型安全なコードを書くことが得意です。
-              <br />
+              <div className=" mt-4 p-4 bg-zinc-200 dark:bg-zinc-800 rounded-lg">
+                <h3 className="font-semibold mb-2 tracking-wider">Skills</h3>
+                <table className=" w-full text-left border-collapse text-base">
+                  <tr>
+                    <th className=" w-40">Languages</th>
+                    <td>TypeScript, Ruby, PHP, etc...</td>
+                  </tr>
+                  <tr>
+                    <th>Engine, Frameworks</th>
+                    <td>Node.js, Hono, React, etc...</td>
+                  </tr>
+                  <tr>
+                    <th>Tool, MiddleWare</th>
+                    <td>Git, MySQL, etc..</td>
+                  </tr>
+                </table>
+              </div>
             </p>
           </div>
         </div>
         <SectionTitle className=" mt-16" title="Works" subtitle="制作物" />
-        <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-start gap-4">
+        <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
           <ServiceCard
             title="ホロよてい"
             description="VTuberグループ『ホロライブ』の非公式番組表サービスです。"
@@ -103,6 +116,32 @@ function App() {
             }
             linkText="Github リポジトリ"
             tags={["TypeScript", "Cloudflare Workers", "hono"]}
+          />
+          <ServiceCard
+            title="sugar-djs"
+            description="discord.jsをより使いやすくするためのラッパーライブラリです。"
+            image={
+              "https://opengraph.githubassets.com/cb3d2aa0480ae65a7490240dc4abf3aaddea45f3d3027130289304f21eb05fa7/n-soukun/sugar-djs"
+            }
+            url="https://github.com/n-soukun/sugar-djs"
+            linkIcon={
+              <Github size={20} color={theme === "light" ? "white" : "black"} />
+            }
+            linkText="Github リポジトリ"
+            tags={["TypeScript", "discord.js"]}
+          />
+          <ServiceCard
+            title="openjtalk.js"
+            description="OpenJTalkのラッパーライブラリです。"
+            image={
+              "https://opengraph.githubassets.com/cb3d2aa0480ae65a7490240dc4abf3aaddea45f3d3027130289304f21eb05fa7/n-soukun/openjtalk.js"
+            }
+            url="https://github.com/n-soukun/openjtalk.js"
+            linkIcon={
+              <Github size={20} color={theme === "light" ? "white" : "black"} />
+            }
+            linkText="Github リポジトリ"
+            tags={["TypeScript", "Node.js", "OpenJTalk"]}
           />
         </div>
         <SectionTitle
