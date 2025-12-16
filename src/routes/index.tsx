@@ -7,6 +7,9 @@ import Avator from "../assets/avatar.jpg";
 import Nexus from "../assets/nexus.jpg";
 import Holoyotei from "../assets/holoyotei.png";
 import TwitchNoticeForDiscord from "../assets/twitch-notice-for-discord.png";
+import OpenJTalkJS from "../assets/openjtalk-js.png";
+import SugarDJS from "../assets/sugar-djs.png";
+import TwiCasAPI from "../assets/twicas-api.png";
 
 import { ServiceCard } from "@/components/ServiceCard";
 import { Github } from "@/components/icons/Github";
@@ -120,9 +123,7 @@ function App() {
           <ServiceCard
             title="sugar-djs"
             description="discord.jsをより使いやすくするためのラッパーライブラリです。"
-            image={
-              "https://opengraph.githubassets.com/cb3d2aa0480ae65a7490240dc4abf3aaddea45f3d3027130289304f21eb05fa7/n-soukun/sugar-djs"
-            }
+            image={SugarDJS}
             url="https://github.com/n-soukun/sugar-djs"
             linkIcon={
               <Github size={20} color={theme === "light" ? "white" : "black"} />
@@ -133,15 +134,24 @@ function App() {
           <ServiceCard
             title="openjtalk.js"
             description="OpenJTalkのラッパーライブラリです。"
-            image={
-              "https://opengraph.githubassets.com/cb3d2aa0480ae65a7490240dc4abf3aaddea45f3d3027130289304f21eb05fa7/n-soukun/openjtalk.js"
-            }
+            image={OpenJTalkJS}
             url="https://github.com/n-soukun/openjtalk.js"
             linkIcon={
               <Github size={20} color={theme === "light" ? "white" : "black"} />
             }
             linkText="Github リポジトリ"
             tags={["TypeScript", "Node.js", "OpenJTalk"]}
+          />
+          <ServiceCard
+            title="twicas-api"
+            description="TwiCas API v2 向けの軽量 TypeScript クライアントです。"
+            image={TwiCasAPI}
+            url="https://github.com/n-soukun/twicas-api"
+            linkIcon={
+              <Github size={20} color={theme === "light" ? "white" : "black"} />
+            }
+            linkText="Github リポジトリ"
+            tags={["TypeScript", "zod"]}
           />
         </div>
         <SectionTitle
